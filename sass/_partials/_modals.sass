@@ -1,0 +1,156 @@
+.project-modal
+    width: 50vw
+    height: 50vh
+    background: #fff
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 70
+    display: grid
+    grid-template-columns: 5fr 2fr
+    opacity: 0
+    display: none
+
+    .content
+        width: 100%
+        height: 95%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0 3em
+        position: relative
+
+        .close-icon
+            position: absolute
+            right: 2em
+            top: 2em
+            font-size: 1.5rem
+            color: #000
+            transition: color .2s ease
+            cursor: pointer
+
+            &:hover
+                color: #E00
+
+        #project-description
+            margin: 1em 0 1.25em 0
+            width: 95%
+
+        .small-heading
+            font-weight: 700
+            color: $veryDarkGrey
+            margin-bottom: 5px
+            font-size: 1rem
+
+        .skill-list
+            display: flex
+            list-style: none
+            margin-bottom: 3.25em
+
+            .skill
+                padding: 6px 12px
+                background-color: rgba($primary, .2)
+                font-size: .925rem
+                position: relative
+                overflow: hidden
+
+                &:not(:first-of-type)
+                    margin-left: 1em
+
+                &::after
+                    content: ''
+                    width: 10px
+                    height: 50px
+                    transform: rotateZ(45deg)
+                    background-color: white
+                    filter: blur(10px)
+                    position: absolute
+                    top: -25px
+                    left: 0
+                    animation: shine 2s linear infinite
+
+        .btn-group .btn:last-of-type
+            margin-left: 1em
+
+    .image
+        background: url('../img/work-screenshots/bug_tracker.jpg') no-repeat center/cover
+        width: 100%
+        height: 100%
+        animation: projectImg 5s ease-in-out infinite
+
+.overlay
+    width: 100vw
+    height: 1000vh
+    position: fixed
+    top: 0
+    left: 0
+    background: rgba(0,0,0,0.75)
+    z-index: 60
+    opacity: 0
+    display: none
+
+@media screen and (max-width: 1630px)
+    .project-modal
+        width: 75vw
+        height: 60vh
+        min-height: 470px
+
+@media screen and (max-width: 1024px)
+    .project-modal
+        width: 90vw
+        height: 50vh
+
+@media screen and (max-width: 848px)
+    .project-modal
+        grid-template-columns: 1fr
+        height: 50vh
+
+        .image
+            animation: none
+            display: none
+
+@media screen and (max-width: 578px)
+    .project-modal
+        height: fit-content
+
+        .content
+            position: static
+            padding: 4em 2em 2em 2em
+            width: 90vw
+            text-align: center
+
+            .section-pill
+                margin: 0 auto
+
+            #project-description
+                margin: 1em 0 1.25em 0
+                width: 100%
+
+            .close-icon
+                top: 1.5em
+                right: 1.5em
+
+            .skill-list
+                flex-direction: column
+                width: 50%
+                margin: 1em auto 2em auto
+
+                .skill:not(:first-of-type)
+                    margin: 1em 0 0 0
+
+            .btn-group
+
+                .btn
+                    display: block
+                    width: 100%
+                    text-align: center
+                    margin: 0 auto
+
+                .btn:last-of-type
+                    margin: 1em auto 0 auto
+
+@media screen and (max-width: 448px)
+    .project-modal .content
+        .skill-list
+            width: 80%

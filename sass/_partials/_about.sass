@@ -1,0 +1,57 @@
+#about
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    .about-img-container
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        .about-img
+            width: 85%
+            box-shadow: 0px 0px 35px rgba(0,0,0,0.25)
+
+    .about-content
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        .btn
+            margin-top: 2em
+
+        .section-heading
+            margin-bottom: 1em
+
+@media screen and (max-width: 1650px)
+    #about
+        .about-img
+            width: 75%
+
+@media screen and (max-width: 822px)
+    #about
+        grid-template-columns: 1fr
+        row-gap: 2em
+
+        .about-img-container
+            justify-content: center
+
+            .about-img
+                width: 50%
+
+        .about-content
+            text-align: center
+            width: 60%
+            margin: 0 auto
+
+            .section-pill
+                margin: 2em auto 0 auto
+
+            .btn
+                margin: 2em auto 0 auto
+
+@media screen and (max-width: 658px)
+    #about
+        .about-content
+            width: 80%

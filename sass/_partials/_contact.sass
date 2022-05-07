@@ -1,0 +1,97 @@
+#contact
+    background: url('../img/test-contact-bg.jpg') no-repeat top/cover
+    min-height: 75vh
+    padding-bottom: 10vh
+
+    .section-heading
+        color: #fff
+        text-align: center
+        margin-top: 1em
+        font-size: 2.25rem
+
+    .section-paragraph
+        text-align: center
+        margin: 1em 0 5em 0
+        color: lighten($lightGrey, 15%)
+
+    .contact-form
+        width: 50%
+        margin: 0 auto
+        min-width: 525px
+
+        #form-alert
+            background: rgba(#f00, .1)
+            padding: 1em
+            position: relative
+            top: -1em
+            display: none
+
+            .alert-text
+                color: #f00
+                font-family: "Roboto", sans-serif
+                font-weight: 300
+
+        .form-group
+            display: block
+            text-align: center
+
+            label
+                color: #fff
+                display: block
+                font-weight: 300
+                margin-bottom: 12px
+                text-align: left
+
+            .input
+                width: 100%
+                background: rgba(#fff, 0.075)
+                border: none
+                border-bottom: 1px solid #ededed
+                padding: 16px 12px
+                color: #fff
+                outline: none
+                transition: .2s ease
+                font-family: "Roboto", sans-serif
+                font-size: .75rem
+                letter-spacing: .5px
+
+                &:focus
+                    border-color: $primary
+                    background: rgba($primary, 0.15)
+
+                &.textarea
+                    font-family: "Roboto", sans-serif
+                    letter-spacing: .5px
+                    min-height: 120px
+
+                    &::placeholder
+                        font-family: "Roboto", sans-serif
+                        letter-spacing: .5px
+
+                &::placeholder
+                    color: #aaa
+
+            &:not(:first-of-type)
+                margin-top: 2em
+
+@media screen and (max-width: 822px)
+    #contact
+        .contact-form
+            min-width: 0
+            width: 75%
+
+@media screen and (max-width: 552px)
+    #contact
+        .contact-form
+            width: 100%
+
+            #form-alert
+                text-align: center
+
+        .section-heading
+            width: 75%
+            margin: 0 auto
+
+        .section-paragraph
+            width: 75%
+            margin: 1em auto 2.5em auto
